@@ -1,11 +1,10 @@
 import React from "react";
+import Button from "./components/Button";
 
 const App: React.FC<any> = () => (
   <div className="App">
     <header className="App-header">
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
+      <Button width={100} />
     </header>
   </div>
 );

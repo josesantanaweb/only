@@ -16,7 +16,6 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": [
       2,
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },
@@ -31,14 +30,11 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "react/prop-types": "off",
   },
   settings: {
     react: {
       version: "latest",
-    },
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
       node: {
