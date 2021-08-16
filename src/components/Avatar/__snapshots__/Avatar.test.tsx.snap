@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders the avatar correctly 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM brpaAy"
+  >
+    <h3>
+      D
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Avatar should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM brpaAy"
+  >
+    <img
+      alt="avatar"
+      src="https://i.pravatar.cc/150?img=3"
+    />
+  </div>
+</div>
+`;

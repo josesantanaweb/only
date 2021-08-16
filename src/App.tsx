@@ -1,15 +1,17 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import theme from "./styles/themes/default";
+import { lightTheme } from "./styles/theme";
 
-import Button from "./components/Button";
+import Avatar from "./components/Avatar";
 import GlobalStyle from "./styles/global";
 
+// import avatar from "./assets/img/avatar.png";
+
 const App: React.FC = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={lightTheme}>
     <header className="App-header">
       <GlobalStyle />
-      <Button width={100} />
+      <Avatar name="Margot" />
     </header>
   </ThemeProvider>
 );
