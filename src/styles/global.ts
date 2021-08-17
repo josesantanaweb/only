@@ -118,6 +118,19 @@ const GlobalStyles = createGlobalStyle`
       font-size: 16px;
       font-family: ${theme.font.family};
     }
+
+    /* Spacing utilities */
+    ${[5, 10, 15, 20].map(
+      (size) => css`
+        ${["top", "right", "bottom", "left"].map(
+          (dir) => css`
+            .m${dir[0]}-${size}{
+              margin-${dir}: ${size}px;
+            }
+          `
+        )}
+      `
+    )}
   `}
 `;
 

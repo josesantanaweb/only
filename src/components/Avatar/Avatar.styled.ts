@@ -22,8 +22,9 @@ const AvatarStyled = styled.div<AvatarProps>(
     display: inline-block;
     border-radius: 100%;
     display: flex;
+    background-color: ${theme.colors.primary};
     align-items: center;
-    color: ${theme?.colors.white};
+    color: ${theme.colors.white};
     justify-content: center;
     overflow: hidden;
     // FIXME: Eliminar luego de agregar el component text

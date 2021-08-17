@@ -3,7 +3,7 @@
 exports[`Avatar renders the avatar correctly 1`] = `
 <div>
   <div
-    class="sc-bdnxRM brpaAy"
+    class="sc-bdnxRM hxYBZh"
   >
     <h3>
       D
@@ -15,7 +15,7 @@ exports[`Avatar renders the avatar correctly 1`] = `
 exports[`Avatar should render with all the props given 1`] = `
 <div>
   <div
-    class="sc-bdnxRM brpaAy"
+    class="sc-bdnxRM hxYBZh"
   >
     <img
       alt="avatar"
