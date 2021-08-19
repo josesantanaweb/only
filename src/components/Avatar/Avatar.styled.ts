@@ -27,10 +27,6 @@ const AvatarStyled = styled.div<AvatarProps>(
     color: ${theme.colors.white};
     justify-content: center;
     overflow: hidden;
-    // FIXME: Eliminar luego de agregar el component text
-    h3 {
-      font-weight: 400;
-    }
     ${!!size && wrapperModifiers[size]};
   `
 );

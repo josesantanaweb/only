@@ -3,7 +3,7 @@ import { render } from "../../test";
 import Heading from "./Heading";
 
 describe("Heading", () => {
-  it("renders the avatar correctly", () => {
+  it("renders the heading correctly", () => {
     const { container } = render(<Heading>Titulo</Heading>);
     expect(container).toMatchSnapshot();
   });

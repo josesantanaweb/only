@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
-import { HeadingProps } from "./types";
+import { TextProps } from "./types";
 
-export const HeadingStyled = styled.h6<HeadingProps>(
-  ({ theme, uppercase, as, variant }) => {
+export const TextStyled = styled.p<TextProps>(
+  ({ theme, uppercase, type, variant }) => {
     const uppercaseMixin = css`
       text-transform: ${uppercase ? "uppercase" : "capitalize"};
     `;
@@ -17,9 +17,17 @@ export const HeadingStyled = styled.h6<HeadingProps>(
           return css`
             color: ${theme.colors.secondary};
           `;
+        case "black":
+          return css`
+            color: ${theme.colors.black};
+          `;
         case "white":
           return css`
             color: ${theme.colors.white};
+          `;
+        case "grey":
+          return css`
+            color: ${theme.colors.grey};
           `;
         default:
           return css`
@@ -28,48 +36,36 @@ export const HeadingStyled = styled.h6<HeadingProps>(
       }
     };
 
-    const sizeMixin = () => {
-      switch (as) {
-        case "h1":
+    const typeMixin = () => {
+      switch (type) {
+        case "body-small":
           return css`
-            font-size: ${theme.font.sizes.h1};
-            line-height: 72px;
-            font-weight: ${theme.font.bold};
-          `;
-        case "h2":
-          return css`
-            font-size: ${theme.font.sizes.h2};
-            line-height: 56px;
-            font-weight: ${theme.font.bold};
-          `;
-        case "h3":
-          return css`
-            font-size: ${theme.font.sizes.h3};
-            line-height: 40px;
-            font-weight: ${theme.font.medium};
-          `;
-        case "h4":
-          return css`
-            font-size: ${theme.font.sizes.h4};
-            line-height: 32px;
+            font-size: ${theme.font.sizes.bodySmall};
+            line-height: 16px;
             font-weight: ${theme.font.regular};
           `;
-        case "h5":
+        case "body-medium":
           return css`
-            font-size: ${theme.font.sizes.h5};
-            line-height: 32px;
+            font-size: ${theme.font.sizes.bodyMedium};
+            line-height: 20px;
             font-weight: ${theme.font.regular};
           `;
-        case "h6":
+        case "body-large":
           return css`
-            font-size: ${theme.font.sizes.h6};
-            line-height: 28px;
+            font-size: ${theme.font.sizes.bodyLarge};
+            line-height: 27px;
+            font-weight: ${theme.font.regular};
+          `;
+        case "button":
+          return css`
+            font-size: ${theme.font.sizes.button};
+            line-height: 21px;
             font-weight: ${theme.font.regular};
           `;
         default:
           return css`
-            font-size: 18px;
-            line-height: 26px;
+            font-size: 14px;
+            line-height: 21px;
             font-weight: ${theme.font.regular};
           `;
       }
@@ -81,11 +77,11 @@ export const HeadingStyled = styled.h6<HeadingProps>(
       font-weight: 500;
       padding: 0;
       line-height: 1;
-      ${sizeMixin};
+      ${typeMixin};
       ${variantMixin};
       ${uppercaseMixin};
     `;
   }
 );
 
-export default HeadingStyled;
+export default TextStyled;

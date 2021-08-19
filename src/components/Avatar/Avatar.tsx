@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Heading from "../Heading";
 import AvatarStyled from "./Avatar.styled";
 import { AvatarProps } from "./types";
 
@@ -10,7 +11,13 @@ const Avatar: FC<AvatarProps> = ({
   const nameFirtsLetter = name?.substr(0, 1);
   return (
     <AvatarStyled size={size}>
-      {img ? <img src={img} alt="avatar" /> : <h3>{nameFirtsLetter}</h3>}
+      {img ? (
+        <img src={img} alt="avatar" />
+      ) : (
+        <Heading tag={size === "large" ? "h3" : "h6"} variant="white">
+          {nameFirtsLetter}
+        </Heading>
+      )}
     </AvatarStyled>
   );
 };

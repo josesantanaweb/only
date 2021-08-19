@@ -13,18 +13,20 @@ declare module "styled-components" {
     font: {
       family: string;
       light: number;
-      normal: number;
-      semibold: number;
+      regular: number;
+      medium: number;
       bold: number;
       sizes: {
-        xsmall: string;
-        small: string;
-        medium: string;
-        large: string;
-        xlarge: string;
-        xxlarge: string;
-        xxxlarge: string;
-        huge: string;
+        bodySmall: string;
+        bodyMedium: string;
+        bodyLarge: string;
+        button: string;
+        h6: string;
+        h5: string;
+        h4: string;
+        h3: string;
+        h2: string;
+        h1: string;
       };
     };
     colors: {
@@ -54,10 +56,6 @@ declare module "styled-components" {
       xlarge: string;
       xxlarge: string;
     };
-    transition: {
-      default: string;
-      fast: string;
-    };
   }
 }
 
@@ -72,24 +70,27 @@ export const lightTheme: DefaultTheme = {
   font: {
     family: "Poppins,'Open Sans', 'Helvetica Neue', sans-serif",
     light: 300,
-    normal: 400,
-    semibold: 500,
+    regular: 400,
+    medium: 500,
     bold: 600,
     sizes: {
-      xsmall: "1rem",
-      small: "1.2rem",
-      medium: "1.4rem",
-      large: "1.6rem",
-      xlarge: "1.8rem",
-      xxlarge: "2.2rem",
-      xxxlarge: "2.5rem",
-      huge: "5.2rem",
+      bodySmall: "12px",
+      bodyMedium: "14px",
+      bodyLarge: "16px",
+      button: "14px",
+      h6: "20px",
+      h5: "22px",
+      h4: "26px",
+      h3: "28px",
+      h2: "40px",
+      h1: "54px",
     },
   },
   colors: {
+    black: "#141213",
     white: "#ffffff",
     offWhite: "#F0F0F0",
-    grey: "#a6a6a6",
+    grey: "#9AB4C1",
     grey100: "#d9d9d9",
     grey200: "#bfbfbf",
     grey300: "#a6a6a6",
@@ -99,10 +100,9 @@ export const lightTheme: DefaultTheme = {
     grey700: "#404040",
     grey800: "#262626",
     grey900: "#0d0d0d",
-    black: "#141213",
-    primary: "#07ACEE",
-    secondary: "#0E024E",
-    tertiary: "#9AB4C1",
+    primary: "#4D18E2",
+    secondary: "#07ACEE",
+    tertiary: "#1D0458",
   },
   spacings: {
     xxsmall: "0.8rem",
@@ -112,10 +112,6 @@ export const lightTheme: DefaultTheme = {
     large: "4.0rem",
     xlarge: "4.8rem",
     xxlarge: "5.6rem",
-  },
-  transition: {
-    default: "0.3s ease-in-out",
-    fast: "0.1s ease-in-out",
   },
 };
 
