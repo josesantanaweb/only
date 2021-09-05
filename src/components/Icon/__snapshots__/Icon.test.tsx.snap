@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders the Icon correctly 1`] = `
+<div>
+  <i
+    class="sc-bdnxRM fmVSpi icon-home"
+  />
+</div>
+`;
+
+exports[`Icon should render with all the props 1`] = `
+<div>
+  <i
+    class="sc-bdnxRM jAqhZb icon-home"
+  />
+</div>
+`;

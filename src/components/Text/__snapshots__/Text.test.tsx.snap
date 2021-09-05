@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders the text correctly 1`] = `
+<div>
+  <p
+    class="sc-bdnxRM cALYuU"
+    type="body-medium"
+  >
+    Texto
+  </p>
+</div>
+`;
+
+exports[`Text should render with all the props 1`] = `
+<div>
+  <p
+    class="sc-bdnxRM aLiKR"
+    type="body-large"
+  >
+    Texto
+  </p>
+</div>
+`;

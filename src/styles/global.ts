@@ -2,44 +2,6 @@ import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
-    /* Fonts */
-    @font-face {
-      font-family: "Poppins";
-      src: url("../../assets/fonts/Poppins-Thin.otf") format("truetype");
-      font-weight: 200;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "Poppins";
-      src: url("../../assets/fonts/Poppins-Light.otf") format("truetype");
-      font-weight: 300;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "Poppins";
-      src: url("../../assets/fonts/Poppins-Regular.otf") format("truetype");
-      font-weight: 400;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "Poppins";
-      src: url("../../assets/fonts/Poppins-Medium.otf") format("truetype");
-      font-weight: 500;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "Poppins";
-      src: url("../../assets/fonts/Poppins-SemiBold.otf") format("truetype");
-      font-weight: 600;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "Poppins";
-      src: url("../../assets/fonts/Poppins-Bold.otf") format("truetype");
-      font-weight: 700;
-      font-style: normal;
-    }
-
     /* Box sizing rules */
     *,
     *::before,
@@ -120,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     /* Spacing utilities */
-    ${[5, 10, 15, 20].map(
+    ${[5, 10, 15, 20, 30, 40].map(
       (size) => css`
         ${["top", "right", "bottom", "left"].map(
           (dir) => css`
@@ -131,6 +93,14 @@ const GlobalStyles = createGlobalStyle`
         )}
       `
     )}
+
+    .d-flex {
+      display: flex;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
   `}
 `;
 

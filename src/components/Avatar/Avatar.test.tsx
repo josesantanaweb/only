@@ -8,7 +8,7 @@ describe("Avatar", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should render with all the props given", () => {
+  it("should render with img prop given", () => {
     const { container } = render(
       <Avatar size="medium" img="https://i.pravatar.cc/150?img=3" />
     );
